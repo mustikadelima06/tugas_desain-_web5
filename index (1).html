@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas Segitiga</title>
+</head>
+<body>
+   <h1>Hitung Luas Segitiga<h1>
+    <label for="">Alas Segitiga</label><br>
+     <input type="number" id="alas"><br>
+     <label for="">Tinggi Segitiga</label><br>
+     <input type="number" id="tinggi"><br>
+     <button id="hitung">Hitung</button>
+     <div id="output"></div>
+     <script>
+        const alas = document.getElementById('alas')
+        const tinggi = document.getElementById('tinggi')
+        const hitung = document.getElementById('hitung')
+        const output = document.getElementById('output')
+        hitung.addEventListener('click', function(){
+            let a = alas.value
+            let t = tinggi.value 
+            let l = 0.5*a*t
+            output.innerHTML =`Luas Segitiga dari alas ${a} dan tinggi ${t} adalah ${l} cm2`
+        })
+     </script>
+</body>
+</html>
