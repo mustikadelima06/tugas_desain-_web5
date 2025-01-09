@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN jQuery</title>
+</head>
+<body>
+    
+    <button id="viewTEXT">Tampilkan Text</button>
+    <button id="hideTEXT">Sembunyikan Text</button>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem fuga delectus, amet ab nostrum aperiam repudiandae ipsa molestias quod blanditiis expedita numquam, hic quos porro! Excepturi libero, natus earum, autem facilis minima modi odio mollitia nisi voluptatum quia quidem cum. Dignissimos quia aut, consequuntur, nobis obcaecati modi tempore amet asperiores eum tenetur et recusandae totam, provident voluptatum quis velit qui harum cumque accusantium ad laudantium rem officia sunt maxime. Nihil laboriosam necessitatibus repellat quae, nam adipisci molestiae soluta molestias id ullam dolorum eos corporis eum! Tempore explicabo vero minima! Commodi dolore vitae doloribus autem? Nihil quia quaerat omnis quisquam saepe dolor, quo provident distinctio voluptatum sunt accusantium aut ipsa cumque vel nam perspiciatis! Eaque consectetur beatae quas nulla debitis eos impedit fugiat earum, cum autem labore quis odio corrupti perspiciatis dolorem harum, explicabo architecto voluptatum ipsum dolorum consequuntur rerum accusantium sequi? Iusto, ullam cumque placeat maxime repellat vitae. Id, aspernatur. Quidem obcaecati molestias facilis fuga accusantium quia nobis eaque possimus provident illo, at eveniet? Atque ipsum nam voluptatum deserunt magnam, consequuntur, nobis modi, libero impedit illum dolores assumenda? Dolores voluptates, facere eveniet aliquid eos commodi similique harum dignissimos tempora soluta architecto ad enim itaque distinctio voluptatum! Fuga dolorem minima ipsum? Illum, fuga magni non consectetur, cumque doloribus ipsam animi tenetur perferendis aliquid ullam. Illum numquam adipisci qui voluptatibus tenetur dolorem, exercitationem voluptatum iure nam iusto fugiat ex sint eveniet, labore, modi tempora architecto vero voluptate fuga. Officia corporis odio commodi optio quidem repellendus in sint architecto eius consequatur. Blanditiis amet explicabo, in necessitatibus quas rerum inventore! Cumque animi rem quas totam a repellendus debitis laboriosam aliquid, non cum voluptas cupiditate voluptatibus molestiae quia voluptates earum doloribus consequuntur minus officia harum praesentium. Eius a molestiae, ratione sequi minima ipsum dolore dignissimos totam aspernatur rem iure, velit consequatur voluptate enim cumque laudantium.</p>
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $( function(){
+            $('p').hide()
+            $('#hideTEXT').hide()
+            $('#viewTEXT').on('click',function(){
+                $('p').show(500)
+                $(this).hide()
+                $('#hideTEXT').show()
+            })
+            $('#hideTEXT').on('click',function(){
+                $('p').hide()
+                $(this).hide()
+                $("#viewTEXT").show()
+            })
+        } )
+    </script>
+</body>
+</html>
